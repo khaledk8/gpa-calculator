@@ -1,18 +1,14 @@
 const express = require('express')
 const path = require('path')
-const rootDir = require('../util/path')
+
+const adminController = require('../controllers/adminController')
 
 const router = express.Router()
 
 const user = []
 
-router.get('/admin', (req, res, next) => {
-    res.sendFile(path.join(rootDir, 'views', 'admin.html'))
-})
+router.get('/admin', adminController.getAddUser)
 
-router.post('/add', (req,res,next) => {
-    console.log(req.body)
-    res.redirect('/')
-})
+router.post('/add', adminController.postAddUser)
 
 module.exports = router

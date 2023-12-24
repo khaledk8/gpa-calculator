@@ -1,6 +1,21 @@
 const crypto = require("crypto");
 const algorithm = "des-ecb";
-// use a hex key here
+const fs = require('fs')
+const path = require('path')
+
+function readDESKeyFromFile(filePath) {
+    const absolutePath = path.resolve(filePath);
+    try {
+        const desKey = fs.readFileSync(absolutePath, 'utf8').trim();
+        return desKey;
+    } catch (error) {
+        console.error("Error reading the DES key file:", error);
+        return null; // or handle the error as you see fit
+    }
+}
+
+
+const desKey = readDESKeyFromFile('./deskey');
 
 const DES_KEY = 'aswefsdf';
 

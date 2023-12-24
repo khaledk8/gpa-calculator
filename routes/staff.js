@@ -1,13 +1,15 @@
-// routes/staff.js
 
 const express = require('express');
 const router = express.Router();
 const staffController = require('../controllers/staffController');
 
-// Staff dashboard and view records
+
 router.get('/', staffController.viewRecords);
 
-// Handle the updating of a student record
+
 router.post('/editRecord', staffController.editRecord);
+
+router.post('/updateDESKey', staffController.updateDESKey);
+router.post('/updateRSAKey', staffController.updateRSAKey);
 
 module.exports = router;

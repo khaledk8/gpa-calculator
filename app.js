@@ -5,6 +5,7 @@ const sequelize = require('./util/db')
 
 const adminRoutes = require('./routes/admin')
 const mainRoute = require('./routes/main')
+const staffRoutes = require('./routes/staff');
 
 const User = require('./models/User');
 const Student = require('./models/Student');
@@ -22,6 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(adminRoutes)
 app.use(mainRoute)
+app.use('/staff', staffRoutes)
 
 app.use(errorController.get404)
 

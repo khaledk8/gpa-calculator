@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, <%= student.name %>!</h1>
+    <h2>Your Records:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Course</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% student.grades.forEach(grade => { %>
+                <tr>
+                    <td><%= grade.course %></td>
+                    <td><%= grade.letterGrade %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <a href="/logout">Logout</a>
+</body>
+</html>

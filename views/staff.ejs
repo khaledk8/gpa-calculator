@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Staff Dashboard</title>
+</head>
+<body>
+    <h1>Staff Dashboard</h1>
+    <h2>Edit Student Records</h2>
+    
+    <form action="/editRecord" method="POST">
+        <input type="text" name="studentName" placeholder="Student Name" required>
+        <input type="text" name="course" placeholder="Course" required>
+        <input type="text" name="grade" placeholder="Grade" required>
+        <button type="submit">Update Record</button>
+    </form>
+    <a href="/logout">Logout</a>
+</body>
+</html>

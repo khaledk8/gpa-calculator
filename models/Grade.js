@@ -10,7 +10,6 @@ const SemesterGrades = sequelize.define('SemesterGrades', {
     type: DataTypes.STRING,
     allowNull: false
   },
-  // Additional fields like year, comments, etc.
 });
 
 

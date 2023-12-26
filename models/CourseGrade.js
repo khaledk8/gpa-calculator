@@ -10,7 +10,6 @@ const CourseGrade = sequelize.define('CourseGrade', {
   letterGrade: {
     type: DataTypes.STRING,
     allowNull: false,
-    // Validate the letter grade
     validate: {
       isIn: {
         args: [['A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'F']],

@@ -10,7 +10,7 @@ function readDESKeyFromFile(filePath) {
         return desKey;
     } catch (error) {
         console.error("Error reading the DES key file:", error);
-        return null; // or handle the error as you see fit
+        return null; 
     }
 }
 

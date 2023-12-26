@@ -45,4 +45,6 @@ sequelize.sync({ alter: true }).then(() => {
     console.error('Unable to synchronize the database:', error);
   });
 
+  
+
 app.listen(3000)

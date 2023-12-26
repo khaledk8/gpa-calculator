@@ -48,7 +48,7 @@ exports.updateDESKey = async (req, res) => {
     const { newDESKey } = req.body;
 
     try {
-        // Validate the new key...
+       
 
         // Update the DES key in your storage (e.g., write to a file)
         fs.writeFileSync(path.resolve('../util/deskey'), newDESKey, 'utf8');

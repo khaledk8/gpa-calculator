@@ -1,50 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-	<link rel="stylesheet" type="text/css" href="logged.css">
-</head>
-<body>
-    <header class="container">
-		<div class="primary_header">
-		<nav>
-		<img src="emu_logo.png" alt="logo" style="top:2.2em; left: 20px; position: absolute">
-		<div class="headeraccount"><img src"" style="margin:10px;"><p style="margin:10px;"> </p></div>
-		<ul>
-			<button type="submit">Log out</button>
-			</ul>	
-		</nav>
-		</div>
+<%- include('includes/head.ejs') %>
 	</header>
 	
-	<div class="menuback">
-<div class="container">	
-<div class="drop-wrapper">
-        <button class="btn" data-target="#dropright">Dashboard</button>
-        <div class="drop-menu dropright" id="dropright">
-        </div>
-      </div>
-<div class="drop-wrapper">
-        <button class="btn" data-target="#dropright1">Users</button>
-        <div class="drop-menu dropright" id="dropright1">
-          <a href="#">Update/Create User data</a>
-        </div>
-      </div>
-	<div class="drop-wrapper">
-        <button class="btn" data-target="#dropright2">Financial</button>
-        <div class="drop-menu dropright" id="dropright2">
-        </div>
-      </div>
-	<div class="drop-wrapper">
-        <button class="btn" data-target="#dropright3">Security</button>
-        <div class="drop-menu dropright" id="dropright3">
-          <a href="#">Update/Create Student data</a>
-        </div>
-      </div>
-	</div>
-	</div>	
+	<%- include('includes/staffnav.ejs') %>
 	
 	<section class="forms">
 	<div><h1>Welcome</h1>
@@ -53,12 +10,4 @@
 	</section>
 	
 	
-<footer class="bottom-page">
-	
-	
-	
-	</footer>
-	<script src="script.js"></script>
-</body>
-	
-</html>
+  <%- include('includes/bottom.ejs') %>
